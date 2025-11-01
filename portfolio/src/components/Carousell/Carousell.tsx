@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.css'
 
 type ProjectType = {
@@ -18,9 +18,6 @@ type Props = {
 const Carousell = ({ projects }: Props) => {
   const [hoveredIndex, setHoveredIndex] = useState<number>(-1)
   const [selected, setSelectedIndex] = useState<number>(-1)
-  const containerRef = useRef<HTMLDivElement>(null)
-  const itemRefs = useRef<(HTMLDivElement | null)[]>([])
-
   const baseWidth = 80
   const baseHeight = 300
   const expandedWidth = 1000
@@ -61,18 +58,18 @@ const Carousell = ({ projects }: Props) => {
 
       {/* Carousel */}
       <div
-        className='flex gap-3 m-auto w-fit items-center justify-start'
+        className='flex gap-1 m-auto w-fit items-center justify-start'
       >
         {projects.map((item, key) => {
           const isSelected = selected === key
-					if (selected >= 0 && Math.abs(selected-key) > 1) return
+					// if (selected >= 0 && Math.abs(selected-key) > 1) return
           return (
             <div
               key={key}
               onMouseEnter={() => setHoveredIndex(key)}
               onMouseLeave={() => setHoveredIndex(-1)}
               onClick={() => setSelectedIndex(key)}
-							className="cursor-pointer flex-shrink transition-all duration-1000 saturate-0 hover:w-30 hover:saturate-100"
+							className={`cursor-pointer flex-shrink transition-all duration-1000 saturate-0 ${ !isSelected ? 'hover:scale-150 hover:mx-3':''}`}
 
               style={{
                 width: isSelected ? '85%' : baseWidth,
@@ -109,15 +106,15 @@ const Carousell = ({ projects }: Props) => {
 										</p>
 									</div>
 
-									<div className='relative bottom-[600px] w-fit m-auto'>
-										<Image src={'/example-more.png'} alt='alt' width={1000} height={1000} />
-									</div>
 								</>
               )} 
             </div>
           )
         })}
       </div>
+				<div className='relative w-fit m-auto'>
+					<Image src={'/example-more.png'} alt='alt' width={1000} height={1000} />
+				</div>
     </div>
   )
 }
