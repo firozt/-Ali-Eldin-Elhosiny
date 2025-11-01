@@ -1,6 +1,6 @@
 'use client'
 import Image from 'next/image'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './index.css'
 
 type ProjectType = {
@@ -68,7 +68,7 @@ const Carousell = ({ projects }: Props) => {
               key={key}
               onMouseEnter={() => setHoveredIndex(key)}
               onMouseLeave={() => setHoveredIndex(-1)}
-              onClick={() => setSelectedIndex(key)}
+              onClick={() => {key == selected ? setSelectedIndex(-1) : setSelectedIndex(key)}}
 							className={`cursor-pointer flex-shrink transition-all duration-1000 saturate-0 ${ !isSelected ? 'hover:scale-150 hover:mx-3':''}`}
 
               style={{
@@ -92,12 +92,12 @@ const Carousell = ({ projects }: Props) => {
 									<div className="relative w-full h-full bottom-[85%]">
 										{/* Top-left: title and selected */}
 										<div className="absolute top-0 left-0 flex flex-col gap-2 m-4">
-											<div className="text-6xl bg-white w-fit p-3">{selected+1}</div>
+											<div className="text-6xl bg-white w-fit p-3 px-7">{selected+1}</div>
 											<div className="text-6xl bg-white w-fit p-3">{item.title}</div>
 										</div>
 
 										{/* Bottom-right: description */}
-										<p className="absolute bottom-0 right-0 w-[400px] m-4  p-4 rounded shadow-lg">
+										<p className="absolute bottom-0 right-0 w-[400px] m-4  p-4">
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut autem placeat aut
 											error dignissimos. Mollitia, illo, inventore nesciunt fugit quidem
 											necessitatibus neque voluptatum, itaque quisquam porro ad iusto magnam soluta!
