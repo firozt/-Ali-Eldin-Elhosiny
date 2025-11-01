@@ -81,6 +81,7 @@ const Carousell = ({ projects }: Props) => {
                 src={item.img_url}
                 alt={item.title}
                 width={isSelected ? expandedWidth : baseWidth}
+								sizes="(max-width: 768px) 80vw, 50vw"
                 height={isSelected ? expandedHeight : baseHeight}
                 className={`${isSelected ? 'brightness-20':'brightness-100'} w-[80%] h-[80%] m-auto object-cover object-center transition-all duration-100 saturate-0 ${
                   !isSelected ? 'saturate-0' : ''
@@ -112,9 +113,12 @@ const Carousell = ({ projects }: Props) => {
           )
         })}
       </div>
-				<div className='relative w-fit m-auto'>
-					<Image src={'/example-more.png'} alt='alt' width={1000} height={1000} />
-				</div>
+			{
+					selected != -1 &&
+					<div className='relative w-fit m-auto'>
+						<Image src={'/example-more.png'} alt='alt' width={1000} height={1000} />
+					</div>
+			}
     </div>
   )
 }
