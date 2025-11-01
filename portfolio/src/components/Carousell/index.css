@@ -1,0 +1,12 @@
+#carousell-item {
+    filter: saturate(0);
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2.2s;
+}
+
+#carousell-item:hover {
+    filter: saturate(1);
+    scale: 1.2;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+

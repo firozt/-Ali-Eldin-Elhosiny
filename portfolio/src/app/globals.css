@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+p,h1,h2,h3,h4 {
+  color: white;
+}
+
+:root {
+}
+
+body {
+  background-color: black;
+  background-image: url('/bg.svg') !important;
+  background-repeat: repeat !important;
+  background-size: auto !important;
+}
