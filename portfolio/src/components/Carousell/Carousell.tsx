@@ -3,21 +3,24 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 import './index.css'
 
-type ProjectType = {
-  title: string
-  img_url: string
-  type: string
-  year: string
-  category: string
+type Project = {
+	title: string
+	img_url: string
+	type: string
+	year: string
+	category: string
+	subtext: string
 }
+
 
 type Props = {
-  projects: ProjectType[]
+  projects: Project[]
+  selected: number
+  setSelectedIndex: (newVal: number) => void
 }
 
-const Carousell = ({ projects }: Props) => {
+const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
   const [hoveredIndex, setHoveredIndex] = useState<number>(-1)
-  const [selected, setSelectedIndex] = useState<number>(-1)
   const baseWidth = 80
   const baseHeight = 300
   const expandedWidth = 1000
@@ -25,7 +28,7 @@ const Carousell = ({ projects }: Props) => {
 
 
   return (
-    <div className='mt-18'>
+    <div className='mt-15'>
       {/* Hover info */}
       <div style={selected > -1 ? { display: 'none' } : {}} className='min-h-[150px]'>
         {hoveredIndex > -1 ? (
@@ -98,12 +101,7 @@ const Carousell = ({ projects }: Props) => {
 
 										{/* Bottom-right: description */}
 										<p className="absolute bottom-10 right-0 w-[400px] m-4  p-4">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut autem placeat aut
-											error dignissimos. Mollitia, illo, inventore nesciunt fugit quidem
-											necessitatibus neque voluptatum, itaque quisquam porro ad iusto magnam soluta!
-											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut autem placeat aut
-											error dignissimos. Mollitia, illo, inventore nesciunt fugit quidem
-											necessitatibus neque voluptatum, itaque quisquam porro ad iusto magnam soluta!
+                      {item.subtext}
 										</p>
 									</div>
 
