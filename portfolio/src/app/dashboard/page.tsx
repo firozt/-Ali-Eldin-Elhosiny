@@ -11,6 +11,7 @@ type Project = {
   year: string
   category: string
   subtext: string
+	extra_img?: string
 }
 
 const projects: Project[] = [
@@ -57,7 +58,7 @@ const Page = () => {
     <div className='min-h-screen min-w-screen'>
 		<Navbar />
 		<Carousell projects={projects} selected={selected} setSelectedIndex={(val: number) => setSelectedIndex(val)}/>
-		<footer className={` ${selected > -1 ? 'm-5 mt-10' : 'absolute bottom-0 m-5'}`}>
+		<footer className={` ${selected > -1 ? 'm-5 mt-10 font-inter' : 'absolute bottom-0 m-5 font-inter'}`}>
 			<p>Part 1 Architecture Graduate</p>
 			<p>Available for work</p>
 		</footer>

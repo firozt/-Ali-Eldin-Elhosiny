@@ -61,7 +61,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
 
       {/* Carousel */}
       <div
-        className='flex gap-1 m-auto w-fit items-center justify-start'
+        className='flex gap-3 m-auto w-fit items-center justify-start'
       >
         {projects.map((item, key) => {
           const isSelected = selected === key
@@ -72,7 +72,8 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
               onMouseEnter={() => setHoveredIndex(key)}
               onMouseLeave={() => setHoveredIndex(-1)}
               onClick={() => {key == selected ? setSelectedIndex(-1) : setSelectedIndex(key)}}
-							className={`cursor-pointer flex-shrink transition-all duration-1000 saturate-0 ${ !isSelected ? 'hover:scale-150 hover:mx-3':''}`}
+							className={`cursor-pointer flex-shrink transition-all duration-1000 saturate-0 ${ !isSelected ? 'hover:scale-150 hover:mx-6':''}`}
+              
 
               style={{
                 width: isSelected ? '88vw' : baseWidth,
