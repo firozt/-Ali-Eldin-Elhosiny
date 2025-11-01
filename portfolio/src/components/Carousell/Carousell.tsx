@@ -62,7 +62,7 @@ const Carousell = ({ projects }: Props) => {
       >
         {projects.map((item, key) => {
           const isSelected = selected === key
-					// if (selected >= 0 && Math.abs(selected-key) > 1) return
+					if (selected >= 0 && Math.abs(selected-key) > 1) return
           return (
             <div
               key={key}
@@ -72,7 +72,7 @@ const Carousell = ({ projects }: Props) => {
 							className={`cursor-pointer flex-shrink transition-all duration-1000 saturate-0 ${ !isSelected ? 'hover:scale-150 hover:mx-3':''}`}
 
               style={{
-                width: isSelected ? '85%' : baseWidth,
+                width: isSelected ? '88vw' : baseWidth,
                 height: isSelected ? expandedHeight : baseHeight,
                 zIndex: isSelected ? 10 : 1,
               }}
@@ -83,7 +83,7 @@ const Carousell = ({ projects }: Props) => {
                 width={isSelected ? expandedWidth : baseWidth}
 								sizes="(max-width: 768px) 80vw, 50vw"
                 height={isSelected ? expandedHeight : baseHeight}
-                className={`${isSelected ? 'brightness-20':'brightness-100'} w-[80%] h-[80%] m-auto object-cover object-center transition-all duration-100 saturate-0 ${
+                className={`${isSelected ? 'brightness-20 mx-5 w-[90%] h-[80%] relative left-[25px]':'brightness-100 w-[100%] h-[100%]'}  m-auto object-cover object-center transition-all duration-100 saturate-0 ${
                   !isSelected ? 'saturate-0' : ''
                 }`}
               />
@@ -97,7 +97,7 @@ const Carousell = ({ projects }: Props) => {
 										</div>
 
 										{/* Bottom-right: description */}
-										<p className="absolute bottom-0 right-0 w-[400px] m-4  p-4">
+										<p className="absolute bottom-10 right-0 w-[400px] m-4  p-4">
 											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut autem placeat aut
 											error dignissimos. Mollitia, illo, inventore nesciunt fugit quidem
 											necessitatibus neque voluptatum, itaque quisquam porro ad iusto magnam soluta!

@@ -46,9 +46,13 @@ type Props = {}
 const page = ({}: Props) => {
   return (
     <div className='min-h-screen min-w-screen'>
-			<Navbar />
-			<Carousell projects={projects} />
-		</div>
+		<Navbar />
+		<Carousell projects={projects} />
+		<footer className='absolute bottom-5 ml-5'>
+			<p>Part 1 Architecture Graduate</p>
+			<p>Available for work</p>
+		</footer>
+	</div>
   )
 }
 
