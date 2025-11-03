@@ -95,6 +95,70 @@ const projects: Project[] = [
     category: 'Public Infrastructure',
     subtext: 'HOLBORN is a cultural center designed as an inclusive space for exhibitions, performances, and community engagement. The architecture emphasizes openness, accessibility, and versatility, ensuring that the venue can host a wide variety of events. Through its design, HOLBORN fosters creativity, social interaction, and a deep connection between the public and the arts.'
   },
+  {
+    title: 'BATTERSEA',
+    img_url: '/project3.jpg',
+    type: 'Commercial Tower',
+    year: '2023',
+    category: 'Skyscraper',
+    subtext: 'BATTERSEA is a striking commercial skyscraper that redefines the skyline with its bold design and advanced engineering. The tower incorporates energy-efficient technologies, cutting-edge materials, and flexible office spaces to meet the needs of modern businesses. Its sleek form and thoughtful detailing reflect a balance between functionality, sustainability, and architectural elegance.'
+  },
+  {
+    title: 'HOLBORN',
+    img_url: '/project4.jpg',
+    type: 'Cultural Center',
+    year: '2020',
+    category: 'Public Infrastructure',
+    subtext: 'HOLBORN is a cultural center designed as an inclusive space for exhibitions, performances, and community engagement. The architecture emphasizes openness, accessibility, and versatility, ensuring that the venue can host a wide variety of events. Through its design, HOLBORN fosters creativity, social interaction, and a deep connection between the public and the arts.'
+  },
+  {
+    title: 'BATTERSEA',
+    img_url: '/project3.jpg',
+    type: 'Commercial Tower',
+    year: '2023',
+    category: 'Skyscraper',
+    subtext: 'BATTERSEA is a striking commercial skyscraper that redefines the skyline with its bold design and advanced engineering. The tower incorporates energy-efficient technologies, cutting-edge materials, and flexible office spaces to meet the needs of modern businesses. Its sleek form and thoughtful detailing reflect a balance between functionality, sustainability, and architectural elegance.'
+  },
+  {
+    title: 'HOLBORN',
+    img_url: '/project4.jpg',
+    type: 'Cultural Center',
+    year: '2020',
+    category: 'Public Infrastructure',
+    subtext: 'HOLBORN is a cultural center designed as an inclusive space for exhibitions, performances, and community engagement. The architecture emphasizes openness, accessibility, and versatility, ensuring that the venue can host a wide variety of events. Through its design, HOLBORN fosters creativity, social interaction, and a deep connection between the public and the arts.'
+  },
+  {
+    title: 'BATTERSEA',
+    img_url: '/project3.jpg',
+    type: 'Commercial Tower',
+    year: '2023',
+    category: 'Skyscraper',
+    subtext: 'BATTERSEA is a striking commercial skyscraper that redefines the skyline with its bold design and advanced engineering. The tower incorporates energy-efficient technologies, cutting-edge materials, and flexible office spaces to meet the needs of modern businesses. Its sleek form and thoughtful detailing reflect a balance between functionality, sustainability, and architectural elegance.'
+  },
+  {
+    title: 'HOLBORN',
+    img_url: '/project4.jpg',
+    type: 'Cultural Center',
+    year: '2020',
+    category: 'Public Infrastructure',
+    subtext: 'HOLBORN is a cultural center designed as an inclusive space for exhibitions, performances, and community engagement. The architecture emphasizes openness, accessibility, and versatility, ensuring that the venue can host a wide variety of events. Through its design, HOLBORN fosters creativity, social interaction, and a deep connection between the public and the arts.'
+  },
+  {
+    title: 'BATTERSEA',
+    img_url: '/project3.jpg',
+    type: 'Commercial Tower',
+    year: '2023',
+    category: 'Skyscraper',
+    subtext: 'BATTERSEA is a striking commercial skyscraper that redefines the skyline with its bold design and advanced engineering. The tower incorporates energy-efficient technologies, cutting-edge materials, and flexible office spaces to meet the needs of modern businesses. Its sleek form and thoughtful detailing reflect a balance between functionality, sustainability, and architectural elegance.'
+  },
+  {
+    title: 'HOLBORN',
+    img_url: '/project4.jpg',
+    type: 'Cultural Center',
+    year: '2020',
+    category: 'Public Infrastructure',
+    subtext: 'HOLBORN is a cultural center designed as an inclusive space for exhibitions, performances, and community engagement. The architecture emphasizes openness, accessibility, and versatility, ensuring that the venue can host a wide variety of events. Through its design, HOLBORN fosters creativity, social interaction, and a deep connection between the public and the arts.'
+  },
 ]
 
 const Page = () => {
