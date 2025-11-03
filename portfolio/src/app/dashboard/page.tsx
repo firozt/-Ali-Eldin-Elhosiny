@@ -60,9 +60,12 @@ const Page = () => {
     <div className='flex justify-center align-center overflow-hidden mt-15 h-fit py-8'>
         <Carousell projects={projects} selected={selected} setSelectedIndex={(val: number) => setSelectedIndex(val)}/>
     </div>
-		<footer className={`${selected > -1 ? 'm-5 mt-10' : 'absolute bottom-0 m-5 '}`}>
-			<p>Part 1 Architecture Graduate</p>
-			<p>Available for work</p>
+		{/* <footer className={`${selected > -1 ? 'm-5 mt-10' : 'absolute bottom-0 m-5 '} `}> */}
+    <footer className='flex  w-11/12 m-auto my-10'>
+      <div>
+        <p>Part 1 Architecture Graduate</p>
+        <p>Available for work</p>
+      </div>
 		</footer>
 	</div>
   )
