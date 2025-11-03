@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 14, "column": 0}, "map": {"version":3,"sources":["file:///Users/roooge/Developer/ali-portfolio/portfolio/src/app/dashboard/page.tsx"],"sourcesContent":["import './index.css'\n\ntype Props = {}\n\nconst page = ({}: Props) => {\n  return (\n    <div>\n\t\t\t<p>dashboard</p>\n\t\t</div>\n  )\n}\n\nexport default page"],"names":[],"mappings":";;;;;;;AAIA,MAAM,OAAO,CAAC,EAAS;IACrB,qBACE,8OAAC;kBACF,cAAA,8OAAC;sBAAE;;;;;;;;;;;AAGN;uCAEe","debugId":null}}]
-}

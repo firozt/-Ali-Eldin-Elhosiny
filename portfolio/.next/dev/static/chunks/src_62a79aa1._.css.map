@@ -1,8 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/roooge/Developer/ali-portfolio/portfolio/src/components/Navbar/index.css"],"sourcesContent":["#nav-container h1 {\n    cursor: pointer;\n    position: relative;\n    top: 8px;\n    text-decoration: none;\n    display: inline-block;\n    overflow: hidden;\n    padding: 5px;\n}\n\n#nav-container h1:hover {\n    color: black !important;\n}\n\n#nav-container h1::after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: white;\n    transform: scaleX(0);\n    transform-origin: left;\n    transition: transform 0.3s ease;\n    z-index: -1;\n}\n\n#nav-container h1:hover::after {\n    transform: scaleX(1);\n}\n\n"],"names":[],"mappings":"AAAA;;;;;;;;;;AAUA;;;;AAIA;;;;;;;;;;;;;;AAcA","debugId":null}},
-    {"offset": {"line": 34, "column": 0}, "map": {"version":3,"sources":["file:///Users/roooge/Developer/ali-portfolio/portfolio/src/app/dashboard/index.css"],"sourcesContent":[""],"names":[],"mappings":"","debugId":null}},
-    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///Users/roooge/Developer/ali-portfolio/portfolio/src/components/Carousell/index.css"],"sourcesContent":["#carousell-item {\n    filter: saturate(0);\n    transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 2.2s;\n}\n\n#carousell-item:hover {\n    filter: saturate(1);\n    scale: 1.2;\n    padding-left: 10px;\n    padding-right: 10px;\n}\n\n"],"names":[],"mappings":"AAAA;;;;;AAKA","debugId":null}}]
-}

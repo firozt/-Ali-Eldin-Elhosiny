@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///Users/roooge/Developer/ali-portfolio/portfolio/src/components/Navbar/index.css"],"sourcesContent":["#nav-container h1{\n    cursor: pointer;\n    color: white;\n    position: relative;\n    top: 8px;\n    text-decoration: none;\n}\n\n#nav-container h1::after {\n    content: \"\";\n    position: absolute;\n    left: 0;\n    bottom: 12px; \n    width: 100%;\n    height: 2px;\n    background: white;\n    transform: scaleX(0);\n    transform-origin: left;\n    transition: transform 0.3s ease;\n}\n\n#nav-container h1:hover::after {\n    transform: scaleX(1);\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;;;;;;;;AAaA","debugId":null}},
-    {"offset": {"line": 27, "column": 0}, "map": {"version":3,"sources":["file:///Users/roooge/Developer/ali-portfolio/portfolio/src/app/dashboard/index.css"],"sourcesContent":[""],"names":[],"mappings":"","debugId":null}}]
-}
