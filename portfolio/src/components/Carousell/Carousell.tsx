@@ -73,7 +73,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
               onMouseEnter={() => setHoveredIndex(key)}
               onMouseLeave={() => setHoveredIndex(-1)}
               onClick={() => {key == selected ? setSelectedIndex(-1) : setSelectedIndex(key)}}
-							className={`cursor-pointer flex-shrink transition-all duration-1000 ${ !isSelected ? 'hover:saturate-100 hover:mx-6':'' } ${selected == -1 ? 'hover:scale-120':''} ${isSelected && key == 0 ? 'relative left-5': isSelected && key == projects.length ? 'relative right-5' : '' } `}
+							className={`saturate-0 cursor-pointer flex-shrink transition-all duration-1000 ${ !isSelected ? 'hover:saturate-100 hover:mx-6':'saturate-80' } ${selected == -1 ? 'hover:scale-120 !hover:saturate-100':''} ${isSelected && key == 0 ? 'relative left-5': isSelected && key == projects.length ? 'relative right-5' : '' } `}
               
 
               style={{
@@ -90,7 +90,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
                 height={isSelected ? expandedHeight : baseHeight}
                 className={`${isSelected 
                   ? 'filter brightness-50 saturate-100 mx-5 w-[90%] h-[80%] relative left-[25px]' 
-                  : 'filter brightness-30 saturate-0 w-[100%] h-[100%]'} 
+                  : 'filter brightness-30 w-[100%] h-[100%]'} 
                   m-auto object-cover object-center transition-all duration-300`
                 }
 
