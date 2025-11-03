@@ -29,9 +29,9 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
 
 
   return (
-    <div className='mt-15'>
+    <div className=''>
       {/* Hover info */}
-      <div style={selected > -1 ? { display: 'none' } : {}} className='min-h-[150px]'>
+      <div style={selected > -1 ? { display: 'none' } : {}} className='min-h-[150px] bg-red w-screen'>
         {hoveredIndex > -1 ? (
           <div className='flex justify-between m-auto w-5/6'>
             <div className='flex flex-col gap-2'>
@@ -99,7 +99,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  transition={{ duration: .5, delay:1 }}
+                  transition={{ duration: 1, delay:.8 }}
                   className='h-fit'
                 >
 									<div className="relative w-full h-full bottom-[85%]">
