@@ -94,7 +94,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
           return (
             <div
               key={key}
-              ref={(el) => (itemRefs.current[key] = el)}
+              ref={(el) => { itemRefs.current[key] = el }}
               onMouseEnter={() => setHoveredIndex(key)}
               onMouseLeave={() => setHoveredIndex(-1)}
               onClick={() => {
