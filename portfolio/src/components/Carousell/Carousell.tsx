@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import './index.css'
+import { motion } from 'framer-motion'
 
 type Project = {
 	title: string
@@ -72,11 +73,11 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
               onMouseEnter={() => setHoveredIndex(key)}
               onMouseLeave={() => setHoveredIndex(-1)}
               onClick={() => {key == selected ? setSelectedIndex(-1) : setSelectedIndex(key)}}
-							className={`cursor-pointer flex-shrink transition-all duration-1000 saturate-0 ${ !isSelected ? 'hover:scale-150 hover:mx-6':''}`}
+							className={`cursor-pointer flex-shrink transition-all duration-1000 ${ !isSelected ? 'hover:saturate-100 hover:mx-6':'' } ${selected == -1 ? 'hover:scale-120':''} ${isSelected && key == 0 ? 'relative left-5': isSelected && key == projects.length ? 'relative right-5' : '' } `}
               
 
               style={{
-                width: isSelected ? '88vw' : baseWidth,
+                width: isSelected ? 'min(88vw,1000px)' : selected > -1 ? '400px' : baseWidth,
                 height: isSelected ? expandedHeight : baseHeight,
                 zIndex: isSelected ? 10 : 1,
               }}
@@ -87,26 +88,34 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
                 width={isSelected ? expandedWidth : baseWidth}
 								sizes="(max-width: 768px) 80vw, 50vw"
                 height={isSelected ? expandedHeight : baseHeight}
-                className={`${isSelected ? 'brightness-20 mx-5 w-[90%] h-[80%] relative left-[25px]':'brightness-100 w-[100%] h-[100%]'}  m-auto object-cover object-center transition-all duration-100 saturate-0 ${
-                  !isSelected ? 'saturate-0' : ''
-                }`}
+                className={`${isSelected 
+                  ? 'filter brightness-50 saturate-100 mx-5 w-[90%] h-[80%] relative left-[25px]' 
+                  : 'filter brightness-30 saturate-0 w-[100%] h-[100%]'} 
+                  m-auto object-cover object-center transition-all duration-300`
+                }
+
               />
 							{isSelected && (
-								<>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: .5, delay:1 }}
+                  className='h-fit'
+                >
 									<div className="relative w-full h-full bottom-[85%]">
 										{/* Top-left: title and selected */}
-										<div className="absolute top-0 left-0 flex flex-col gap-2 m-4">
+										<div className="absolute bottom-120 left-0 flex flex-col gap-2 m-4">
 											<div className="text-6xl bg-white w-fit p-3 px-7">{selected+1}</div>
 											<div className="text-6xl bg-white w-fit p-3">{item.title}</div>
 										</div>
 
 										{/* Bottom-right: description */}
-										<p className="absolute bottom-10 right-0 w-[400px] m-4  p-4">
+										<p className="absolute bottom-[-60] right-0 w-[400px] m-4  p-4">
                       {item.subtext}
 										</p>
 									</div>
 
-								</>
+								</motion.div>
               )} 
             </div>
           )

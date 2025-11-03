@@ -1,24 +1,33 @@
-#nav-container h1{
+#nav-container h1 {
     cursor: pointer;
     color: white;
     position: relative;
     top: 8px;
     text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+    padding: 5px;
+}
+
+#nav-container h1:hover {
+    color: black !important;
 }
 
 #nav-container h1::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 12px; 
+    top: 0;
     width: 100%;
-    height: 2px;
+    height: 100%;
     background: white;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
+    z-index: -1;
 }
 
 #nav-container h1:hover::after {
     transform: scaleX(1);
 }
+
