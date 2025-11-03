@@ -1,0 +1,14 @@
+/* [project]/src/components/Carousell/index.css [app-client] (css) */
+#carousell-item {
+  filter: saturate(0);
+  transition: all 2.2s cubic-bezier(.075, .82, .165, 1);
+}
+
+#carousell-item:hover {
+  filter: saturate();
+  padding-left: 10px;
+  padding-right: 10px;
+  scale: 1.2;
+}
+
+/*# sourceMappingURL=src_components_Carousell_index_css_bad6b30c._.single.css.map*/
