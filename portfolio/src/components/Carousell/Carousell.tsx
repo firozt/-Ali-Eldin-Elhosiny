@@ -33,7 +33,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
   useEffect(() => {
     if (selected === -1 || !containerRef.current || !itemRefs.current[selected]) return
 
-    const delay = prevSelected.current === -1 ? 700 : 300
+    const delay = prevSelected.current === -1 ? 450 : 300
     const timer = setTimeout(() => {
       const container = containerRef.current!
       const selectedItem = itemRefs.current[selected]!
@@ -46,7 +46,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
       const targetScroll = itemLeft - containerWidth * 0.45 + itemWidth / 2
 
       animate(container.scrollLeft, targetScroll, {
-        duration: 1.2,
+        duration: .4,
         onUpdate: (value) => {
           container.scrollLeft = value
         },
@@ -95,7 +95,6 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
             <div
               key={key}
               ref={(el) => { itemRefs.current[key] = el }}
-              onMouseEnter={() => setHoveredIndex(key)}
               onMouseLeave={() => setHoveredIndex(-1)}
               onClick={() => {
                 key === selected ? setSelectedIndex(-1) : setSelectedIndex(key)
