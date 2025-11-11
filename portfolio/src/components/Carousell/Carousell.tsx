@@ -58,9 +58,9 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
   }, [selected])
 
   return (
-    <div className='w-full h-fit'>
+    <div className='w-full overflow-hidden'>
       {/* Hover Info */}
-      <div style={selected > -1 ? { display: 'none' } : {}} className='min-h-[150px] w-screen'>
+      <div style={selected > -1 ? { display: 'none' } : {}} className='min-h-[150px] h-[40%] w-screen flex'>
         {hoveredIndex > -1 && (
           <div className='flex justify-between m-auto w-5/6'>
             <div className='flex flex-col gap-2'>
@@ -86,7 +86,7 @@ const Carousell = ({ projects, selected, setSelectedIndex }: Props) => {
       {/* Carousel */}
       <div
         ref={containerRef}
-        className='flex gap-3 w-screen overflow-x-scroll no-scrollbar items-center select-none scroll-smooth px-24'
+        className='flex gap-3 w-screen overflow-x-scroll no-scrollbar h-[60%] items-center select-none scroll-smooth px-24'
         style={{ minHeight: selected === -1 ? 350 : 550 }}
       >
         {projects.map((item, key) => {

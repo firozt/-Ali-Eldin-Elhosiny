@@ -169,7 +169,7 @@ const Page = () => {
 
     <div className='min-h-screen min-w-screen'>
 		<Navbar selected={0}/>
-    <div className='flex justify-center align-center  overflow-hidden mt-15 py-8'>
+    <div className='flex h-[70vh] justify-center align-center  overflow-hidden '>
         <Carousell projects={projects} selected={selected} setSelectedIndex={(val: number) => setSelectedIndex(val)}/>
     </div>
 		{/* <footer className={`${selected > -1 ? 'm-5 mt-10' : 'absolute bottom-0 m-5 '} `}> */}

@@ -7,7 +7,7 @@ const page = (props: Props) => {
   return (
     <div>
         <Navbar selected={1} />
-        blogs
+        under construction
     </div>
   )
 }
