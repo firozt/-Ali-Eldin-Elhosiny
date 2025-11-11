@@ -17,9 +17,8 @@ const Navbar = ({selected=-1}: Props) => {
 			<Image className='cursor-pointer' onClick={() => window.location.reload()} width={60} height={60} src={'/ali-logo.svg'} alt='Ali Eldin Elhosiny logo' />
 			<div id='nav-container' className="flex row m-5 gap-10 font-inter ">
 				<h1 onClick={selected != 0 ?  () => router.push("dashboard") : ()=>1} className={selected == 0 ? selectedStyle : ''}>Projects</h1>
-				<h1 onClick={selected != 0 ?  () => router.push("blogs") : ()=>1} className={selected == 1 ? selectedStyle : ''}>Blog</h1>
-				<h1 onClick={selected != 0 ?  () => router.push("contact") : ()=>1} className={selected == 2 ? selectedStyle : ''}>Contact</h1>
-				<h1>{selected}</h1>
+				<h1 onClick={selected != 1 ?  () => router.push("blogs") : ()=>1} className={selected == 1 ? selectedStyle : ''}>Blog</h1>
+				<h1 onClick={selected != 2 ?  () => router.push("contact") : ()=>1} className={selected == 2 ? selectedStyle : ''}>Contact</h1>
 			</div>
 		</div>
   )
