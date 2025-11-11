@@ -110,10 +110,7 @@ const Page = () => {
 							animate={{ opacity: 1, y: 0 }}
 							exit={{ opacity: 0, y: -10 }}
 							transition={{ duration: 0.4, ease: "easeInOut" }}
-							className={`text-left`}
-							style={{
-								marginTop: (linePosition-15) +'px'
-							}}
+							className={"text-left"}
 						>
 							<h1 className="text-[1.5rem] mb-3">MixC Shenzhen North - China</h1>
 							<p className="font-light my-2">
