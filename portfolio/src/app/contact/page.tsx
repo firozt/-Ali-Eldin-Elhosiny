@@ -112,15 +112,15 @@ const Page = () => {
 							transition={{ duration: 0.4, ease: "easeInOut" }}
 							className={"text-left"}
 						>
-							<h1 className="text-[1.5rem] mb-3">MixC Shenzhen North - China</h1>
-							<p className="font-light my-2">
+							<h1 className="text-[1.5rem] mb-3 bg-[white] text-black! py-1 px-2">MixC Shenzhen North - China</h1>
+							<p className="font-light my-3 ml-1">
 								CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Architecture - Winner
 							</p>
-							<p className="font-light my-2">
+							<p className="font-light my-3 ml-1">
 								CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Interior Design - Winner
 							</p>
-							<h1 className="text-[1.5rem] my-3">MixC Shenzhen North - China</h1>
-							<p className="font-light my-2">
+							<h1 className="text-[1.5rem] mb-3 bg-[white] text-black! py-2 px-4">MixC Shenzhen North - China</h1>
+							<p className="font-light my-2 ml-1">
 								CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Architecture - Winner
 							</p>
 						</motion.div>
