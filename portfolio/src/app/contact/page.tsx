@@ -13,7 +13,7 @@ const page = (props: Props) => {
 						<h1 className='leading-[6.5vw]'>ALI <br/> ELDIN <br/> ELHOSINY</h1>
 						<h2 className='subtext text-[3vw] brightness-60'>architect</h2>
 					</div>
-					<div className='subtext text-[2vw] brightness-30 leading-8'>
+					<div className='subtext text-[2vw] brightness-30 leading-10'>
 						<h3>acme</h3>
 						<h3>loughbrough university</h3>
 					</div>
