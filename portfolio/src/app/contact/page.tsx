@@ -19,7 +19,7 @@ const page = (props: Props) => {
 					</div>
 				</div>
 				<div className='flex max-w-[20%] self-center h-[70vh] align-center'>
-					<p className='text-right  text-[1vw] align-center self-center'>
+					<p className='text-right  text-[.8vw] align-center self-center'>
 						I am a 23-year-old Architecture graduate from South West London with experience both within
 						and beyond the architectural field. My work is driven by an interest in urban design and the
 						creation of sustainable, well-considered public spaces. I have contributed to projects at both
