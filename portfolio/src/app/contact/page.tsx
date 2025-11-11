@@ -13,13 +13,13 @@ const page = (props: Props) => {
 						<h1 className='leading-[6.5vw]'>ALI <br/> ELDIN <br/> ELHOSINY</h1>
 						<h2 className='subtext text-[3vw] brightness-60'>architect</h2>
 					</div>
-					<div className='subtext text-[2vw] brightness-30 leading-10'>
+					<div className='subtext text-[2vw] leading-10'>
 						<h3>acme</h3>
 						<h3>loughbrough university</h3>
 					</div>
 				</div>
-				<div className='flex max-w-[20%] self-center h-[70vh] align-center'>
-					<p className='text-right  text-[.85vw] align-center self-center max-w-[25vw]'>
+				<div className='flex max-w-[40%] self-center h-[70vh] align-right flex-right'>
+					<p className='text-right min-w-[300px] max-w-[50%]   text-[.85rem] align-center self-center ml-auto'>
 						I am a 23-year-old Architecture graduate from South West London with experience both within
 						and beyond the architectural field. My work is driven by an interest in urban design and the
 						creation of sustainable, well-considered public spaces. I have contributed to projects at both
