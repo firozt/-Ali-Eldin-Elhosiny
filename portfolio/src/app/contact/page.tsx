@@ -103,31 +103,31 @@ const Page = () => {
               }}
             />
           </div>
-
-          {/* Award Details */}
-
-<AnimatePresence mode="wait">
-  <motion.div
-    key={selectedIndex} // triggers animation when index changes
-    initial={{ opacity: 0, y: 10 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -10 }}
-    transition={{ duration: 0.4, ease: "easeInOut" }}
-    className="text-left"
-  >
-    <h1 className="text-[1.5rem] mb-3">MixC Shenzhen North - China</h1>
-    <p className="font-light my-2">
-      CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Architecture - Winner
-    </p>
-    <p className="font-light my-2">
-      CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Interior Design - Winner
-    </p>
-    <h1 className="text-[1.5rem] my-3">MixC Shenzhen North - China</h1>
-    <p className="font-light my-2">
-      CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Architecture - Winner
-    </p>
-  </motion.div>
-</AnimatePresence>
+					<AnimatePresence mode="wait">
+						<motion.div
+							key={selectedIndex} // triggers animation when index changes
+							initial={{ opacity: 0, y: 10 }}
+							animate={{ opacity: 1, y: 0 }}
+							exit={{ opacity: 0, y: -10 }}
+							transition={{ duration: 0.4, ease: "easeInOut" }}
+							className={`text-left`}
+							style={{
+								marginTop: (linePosition-15) +'px'
+							}}
+						>
+							<h1 className="text-[1.5rem] mb-3">MixC Shenzhen North - China</h1>
+							<p className="font-light my-2">
+								CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Architecture - Winner
+							</p>
+							<p className="font-light my-2">
+								CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Interior Design - Winner
+							</p>
+							<h1 className="text-[1.5rem] my-3">MixC Shenzhen North - China</h1>
+							<p className="font-light my-2">
+								CR Land Awards {selectedIndex >= 0 ? 2025 - selectedIndex : 2025}: Architecture - Winner
+							</p>
+						</motion.div>
+					</AnimatePresence>
 
         </div>
       </div>
